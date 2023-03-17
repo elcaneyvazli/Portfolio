@@ -7,21 +7,19 @@ import {
   BsNewspaper,
 } from "react-icons/bs";
 import { MdOutlineWork } from "react-icons/md";
-import { motion } from "framer-motion";
-
 const Menu = () => {
   const [toogle, setToogle] = useState(false);
   const closemenu = () => {
     setToogle(false);
   };
   return (
-    <motion.div
-      className={`absolute top-[2rem] left-[2rem] z-100 bg-grey rounded-full ${
+    <div
+      className={`fixed top-[2rem] left-[2rem] z-100 bg-grey rounded-full ${
         toogle ? "p-[1rem] pt-[2rem]" : "p-[2rem]"
       } transition ease-in-out delay-150 `}
     >
       <div className="flex flex-col items-center">
-        <motion.img
+        <img
           initial={{ x: 0, y: 0 }}
           animate={{ x: 0, y: 0 }}
           transition={{ duration: 1 }}
@@ -32,7 +30,7 @@ const Menu = () => {
         />
       </div>
       {toogle && (
-        <motion.div
+        <div
           className="flex flex-col items-center gap-[2rem] py-[3rem]"
         >
           <Link
@@ -79,9 +77,9 @@ const Menu = () => {
             <BsNewspaper className="text-white w-[2rem] h-[2rem]" />
             <p className="text-white text-[1.4rem]">Blog</p>
           </Link>
-        </motion.div>
+        </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 
