@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { BsFillPlayFill } from "react-icons/bs";
+import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 import ReactHowler from "react-howler";
 
 const Play = () => {
@@ -30,10 +30,11 @@ const Play = () => {
         />
       )}
 
-      <BsFillPlayFill
-        className="text-white text-[3rem] cursor-pointer"
-        onClick={handlePlay}
-      ></BsFillPlayFill>
+      {play ? (
+        <BsPauseFill className="text-white text-[3rem] cursor-pointer" onClick={handlePlay}/>
+      ) : (
+        <BsFillPlayFill className="text-white text-[3rem] cursor-pointer" onClick={handlePlay}/>
+      )}
     </div>
   );
 };
