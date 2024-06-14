@@ -13,16 +13,19 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning>
       <ReduxProvider>
-        <body className="relative">
+        <body className="">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem={true}
             storageKey="theme"
           >
-            <Navbar />
-            <div className="min-h-screen bg-white dark:bg-primary">
-              {children}
+            <div className="w-full">
+              <Navbar />
+              <div className="min-h-screen bg-white dark:bg-primary">
+                {children}
+              </div>
+              <Footer />
             </div>
           </ThemeProvider>
         </body>
