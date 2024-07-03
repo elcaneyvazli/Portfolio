@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      { "source": "/", "destination": "/portfolio", "permanent": true }
+    ],
+    "rewrites": [
+      { "source": "/portfolio", "destination": "https://portfolio-ten-iota-67.vercel.app/" },
+      { "source": "/project", "destination": "https://focus-flow-main.vercel.app/" }
+    ]
+  }
+  

@@ -20,13 +20,11 @@ export default function RootLayout({ children }) {
             enableSystem={true}
             storageKey="theme"
           >
-            <div className="w-full">
-              <Navbar />
-              <div className="min-h-screen bg-white dark:bg-primary">
-                {children}
-              </div>
-              <Footer />
+            <Navbar />
+            <div className="min-h-screen bg-white dark:bg-primary">
+              {children}
             </div>
+            <Footer />
           </ThemeProvider>
         </body>
       </ReduxProvider>
