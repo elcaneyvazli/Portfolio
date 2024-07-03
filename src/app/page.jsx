@@ -2,10 +2,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setDarkMode } from "@/redux/features/DarkModeSlice/DarkModeSlice";
-import Hero from "@/ui/components/Hero/Hero";
 import dynamic from "next/dynamic";
 import ExperienceSkeleton from "@/ui/components/Experience/ExperienceSkeleton";
 import ProjectSkeleton from "@/ui/components/Project/ProjectSkeleton";
+import Hero from "@/ui/components/Hero/Hero";
 
 const Experience = dynamic(
   () => import("@/ui/components/Experience/Experience"),
@@ -39,6 +39,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-64 w-full">
+      {/* <Hero /> */}
       <Hero />
       <Project />
       <Experience />

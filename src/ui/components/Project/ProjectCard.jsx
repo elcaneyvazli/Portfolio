@@ -5,7 +5,6 @@ import Image from "next/image";
 import { supabase } from "@/lib/supabase"; // Supabase bağlantısını ekleyin
 
 export default function ProjectCard({ project }) {
-  console.log(project);
   return (
     <div className="col-span-2 md:col-span-1 flex flex-col gap-16 rounded-main w-full">
       <div className="w-full h-fit rounded-main">

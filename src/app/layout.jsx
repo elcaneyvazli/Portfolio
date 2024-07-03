@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning>
       <ReduxProvider>
-        <body className="">
+        <body className="z-20">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             storageKey="theme"
           >
             <Navbar />
-            <div className="min-h-screen bg-white dark:bg-primary">
+            <div className="min-h-screen bg-white dark:bg-primary z-20">
               {children}
             </div>
             <Footer />
