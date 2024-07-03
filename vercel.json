@@ -1,15 +1,12 @@
 {
-  "redirects": [
-    { "source": "/", "destination": "/portfolio", "permanent": true }
-  ],
   "rewrites": [
     {
-      "source": "/portfolio",
-      "destination": "https://portfolioee.vercel.app"
+      "source": "/portfolio/:match*",
+      "destination": "hhttps://portfolioee.vercel.app/:match*"
     },
     {
-      "source": "/project",
-      "destination": "https://focus-flow-main.vercel.app/"
+      "source": "/project/:match*",
+      "destination": "https://focus-flow-main.vercel.app/:match*"
     }
   ]
 }
