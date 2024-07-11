@@ -13,13 +13,6 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex flex-row gap-32 items-center z-20">
-        <div className="flex-row gap-32 hidden md:flex z-20">
-          <h1 className="text-md text-primary dark:text-input-bg z-20">Project</h1>
-          <h1 className="text-md text-primary dark:text-input-bg z-20">
-            Experience
-          </h1>
-        </div>
-
         <DarkModeButton />
       </div>
     </div>

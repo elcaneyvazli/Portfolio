@@ -5,7 +5,6 @@ import img1 from "@/ui/assert/1.png";
 import img2 from "@/ui/assert/2.jpg";
 import img3 from "@/ui/assert/3.jpg";
 import img4 from "@/ui/assert/4.jpg";
-import { supabase } from "@/lib/supabase"; // Supabase bağlantısını ekleyin
 
 export default function Hero() {
   const products = [
@@ -16,14 +15,22 @@ export default function Hero() {
       thumbnail: img2,
     },
     {
-      thumbnail: img3,
+      thumbnail: img1,
     },
-
     {
       thumbnail: img4,
     },
     {
       thumbnail: img1,
+    },
+    {
+      thumbnail: img2,
+    },
+    {
+      thumbnail: img3,
+    },
+    {
+      thumbnail: img4,
     },
     {
       thumbnail: img2,
@@ -44,16 +51,7 @@ export default function Hero() {
       thumbnail: img3,
     },
     {
-      thumbnail: img4,
-    },
-    {
       thumbnail: img1,
-    },
-    {
-      thumbnail: img3,
-    },
-    {
-      thumbnail: img4,
     },
   ];
 
@@ -70,40 +68,40 @@ export default function Hero() {
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 1], [0, 500]),
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -500]),
     springConfig
   );
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [15, 0]),
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.3], [0.2, 1]),
     springConfig
   );
   const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    useTransform(scrollYProgress, [0, 0.3], [20, 0]),
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.3], [-800, 200]),
     springConfig
   );
 
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] dark:bg-primary"
+      className="h-[200vh] xl:h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] dark:bg-primary"
     >
-      <div className="flex flex-col gap-0 items-start justify-center pt-[100px] container relative">
-        <h2 className="text-lg sm:text-2xl text-primary dark:text-input-bg">
+      <div className="flex flex-col gap-0 items-start justify-center pt-[80px] container relative">
+        <h2 className="text-4xl xl:text-2xl text-primary dark:text-input-bg">
           Hello! I&apos;m Elcan.
         </h2>
-        <h1 className="text-2xl sm:text-4xl md:text-[48px] lg:text-[64px] xl:text-[100px] w-full text-primary dark:text-input-bg">
+        <h1 className="text-[48px] sm:text-[56px] md:text-[48px] lg:text-[64px] xl:text-[100px] w-full text-primary dark:text-input-bg">
           Your UX/UI Design Partner. Let&apos;s elevate your digital product.
         </h1>
       </div>

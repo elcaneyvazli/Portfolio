@@ -8,7 +8,7 @@ const ProductCard = ({ product, translate }) => {
     <motion.div
       style={{ x: translate }}
       whileHover={{ y: -20 }}
-      className="group/product h-[600px] w-[600px] relative flex-shrink-0"
+      className="group/product h-[300px] w-[300px] md:w-[400px] md:h-[400px] xl:h-[500px] xl:w-[500px] 2xl:w-[600px] 2xl:h-[600px] relative flex-shrink-0"
     >
       <Image
         src={product.thumbnail.src}
@@ -18,6 +18,7 @@ const ProductCard = ({ product, translate }) => {
         alt="Product Thumbnail"
         placeholder="blur"
         blurDataURL={product.thumbnail.blurDataURL}
+        draggable="false"
       />
     </motion.div>
   );
