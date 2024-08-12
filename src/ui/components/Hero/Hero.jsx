@@ -2,62 +2,40 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import ProductCard from "./ProductCard";
 import img1 from "@/ui/assert/1.png";
-import img2 from "@/ui/assert/2.jpg";
-import img3 from "@/ui/assert/3.jpg";
-import img4 from "@/ui/assert/4.jpg";
+import img2 from "@/ui/assert/2.png";
+import img3 from "@/ui/assert/3.png";
+import img4 from "@/ui/assert/4.png";
+import img5 from "@/ui/assert/5.png";
+import img6 from "@/ui/assert/6.jpg";
+import img7 from "@/ui/assert/7.jpg";
+import img8 from "@/ui/assert/8.jpg";
 
 export default function Hero() {
-  const products = [
-    {
-      thumbnail: img1,
-    },
-    {
-      thumbnail: img2,
-    },
-    {
-      thumbnail: img1,
-    },
-    {
-      thumbnail: img4,
-    },
-    {
-      thumbnail: img1,
-    },
-    {
-      thumbnail: img2,
-    },
-    {
-      thumbnail: img3,
-    },
-    {
-      thumbnail: img4,
-    },
-    {
-      thumbnail: img2,
-    },
-    {
-      thumbnail: img3,
-    },
-    {
-      thumbnail: img4,
-    },
-    {
-      thumbnail: img1,
-    },
-    {
-      thumbnail: img2,
-    },
-    {
-      thumbnail: img3,
-    },
-    {
-      thumbnail: img1,
-    },
+  const allProducts = [
+    { thumbnail: img1 },
+    { thumbnail: img2 },
+    { thumbnail: img3 },
+    { thumbnail: img4 },
+    { thumbnail: img5 },
+    { thumbnail: img6 },
+    { thumbnail: img7 },
+    { thumbnail: img8 },
   ];
 
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  // Function to shuffle an array
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  // Shuffle the products array and duplicate it to ensure we have enough images for 15 slots
+  const shuffledProducts = shuffleArray([...allProducts, ...allProducts, ...allProducts]);
+
+  // Select the first 15 images from the shuffled array
+  const selectedProducts = shuffledProducts.slice(0, 15);
+
+  const firstRow = selectedProducts.slice(0, 5);
+  const secondRow = selectedProducts.slice(5, 10);
+  const thirdRow = selectedProducts.slice(10, 15);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
