@@ -11,31 +11,57 @@ import img7 from "@/ui/assert/7.jpg";
 import img8 from "@/ui/assert/8.jpg";
 
 export default function Hero() {
-  const allProducts = [
-    { thumbnail: img1 },
-    { thumbnail: img2 },
-    { thumbnail: img3 },
-    { thumbnail: img4 },
-    { thumbnail: img5 },
-    { thumbnail: img6 },
-    { thumbnail: img7 },
-    { thumbnail: img8 },
+  const products = [
+    {
+      thumbnail: img6,
+    },
+    {
+      thumbnail: img5,
+    },
+    {
+      thumbnail: img3,
+    },
+    {
+      thumbnail: img3,
+    },
+    {
+      thumbnail: img4,
+    },
+    {
+      thumbnail: img1,
+    },
+    {
+      thumbnail: img2,
+    },
+    {
+      thumbnail: img8,
+    },
+    {
+      thumbnail: img7,
+    },
+    {
+      thumbnail: img6,
+    },
+    {
+      thumbnail: img5,
+    },
+    {
+      thumbnail: img1,
+    },
+    {
+      thumbnail: img2,
+    },
+    {
+      thumbnail: img6,
+    },
+    {
+      thumbnail: img5,
+    },
   ];
 
-  // Function to shuffle an array
-  function shuffleArray(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
-
-  // Shuffle the products array and duplicate it to ensure we have enough images for 15 slots
-  const shuffledProducts = shuffleArray([...allProducts, ...allProducts, ...allProducts]);
-
-  // Select the first 15 images from the shuffled array
-  const selectedProducts = shuffledProducts.slice(0, 15);
-
-  const firstRow = selectedProducts.slice(0, 5);
-  const secondRow = selectedProducts.slice(5, 10);
-  const thirdRow = selectedProducts.slice(10, 15);
+  const firstRow = products.slice(0, 5);
+  const secondRow = products.slice(5, 10);
+  const thirdRow = products.slice(10, 15);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
