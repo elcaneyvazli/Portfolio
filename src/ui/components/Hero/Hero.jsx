@@ -106,7 +106,8 @@ export default function Hero() {
           Hello! I&apos;m Elcan.
         </h2>
         <h1 className="text-[48px] sm:text-[56px] md:text-[48px] lg:text-[64px] xl:text-[100px] w-full text-primary dark:text-input-bg">
-          Your UX/UI Design and Frontend Partner. Let&apos;s elevate your digital product.
+          Your Partner in UX/UI Design & Code. Together, we&apos;ll elevate your
+          digital experience.
         </h1>
       </div>
       <motion.div
