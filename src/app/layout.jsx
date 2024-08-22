@@ -9,9 +9,28 @@ export const metadata = {
   description: "Portfolio of Elcan Eyvazli",
 };
 
+const GOOGLE_ID = "G-LYDZKBLYFW";
+
 export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ID}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GOOGLE_ID}');
+          `,
+          }}
+        />
+      </head>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
