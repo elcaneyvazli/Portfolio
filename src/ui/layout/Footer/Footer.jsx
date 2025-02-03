@@ -35,7 +35,7 @@ export default function Footer() {
             </h1>
           </Link>
         </div>
-        <h1>© Elcan Eyvazlı 2024</h1>
+        <h1>© Elcan Eyvazlı {new Date().getFullYear()}</h1>
       </div>
     </div>
   );
